@@ -8,7 +8,7 @@ const products= [
 	{
  		id: 2,
 		name: 'ExtravaganZZa',
-		image: '/Users/dapatterson20@students.desu.edu/Documents/suspect1.png',
+		image: 'https://sawepecomcdn.blob.core.windows.net/ph-web-ordering/Pizza_Hut_PL/Zdjecia/Refresh_26.10.23/WWW/1.PIZZE/pizza_pepperoni_1000x1000.jpg',
 		price: 14.99,
 	},
 	{
