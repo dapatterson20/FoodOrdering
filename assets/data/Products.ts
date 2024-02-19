@@ -2,7 +2,7 @@ const products= [
 	{
 		id: 1,
 		name: 'Ultimate Pepperoni',
-		image: 'file:///Users/dapatterson20@students.desu.edu/Documents/New%20Folder%20With%20Items/download-2.jpg',
+		image: 'https://sawepecomcdn.blob.core.windows.net/ph-web-ordering/Pizza_Hut_PL/Zdjecia/Refresh_26.10.23/WWW/1.PIZZE/pizza_pepperoni_1000x1000.jpg',
 		price: 12.99,
 	},
 	{
@@ -32,11 +32,9 @@ const products= [
 	{
 		id: 6,
 		name: 'Mega Meat',
-		image: 'file:///Users/dapatterson20@students.desu.edu/Documents/New%20Folder%20With%20Items/download.jpg',
+		image: 'https://sawepecomcdn.blob.core.windows.net/ph-web-ordering/Pizza_Hut_PL/Zdjecia/Refresh_26.10.23/WWW/1.PIZZE/pizza_pepperoni_1000x1000.jpg',
 		price: 14.99,
 	}
 ];
 
-export default {
-	products: products
-  };
+export default products;
