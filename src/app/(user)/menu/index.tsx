@@ -8,6 +8,7 @@ import ProductListItem from '@components/ProductListItem';
 
 export default function MenuScreen() {
   return (
+    //List of products in two columns
     <FlatList
       data={products}
       renderItem={({item})=> <ProductListItem product={item}/>}

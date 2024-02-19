@@ -6,6 +6,7 @@ import Colors from '../constants/Colors';
 import {Product} from '../types';
 import {Link, useSegments} from 'expo-router';
 
+//Default image in place of no specific pizza image
 export const defaultPizzaImage=
     'https://sawepecomcdn.blob.core.windows.net/ph-web-ordering/Pizza_Hut_PL/Zdjecia/Refresh_26.10.23/WWW/1.PIZZE/pizza_pepperoni_1000x1000.jpg';
 
@@ -13,6 +14,7 @@ type ProductListItemProps={
     product: Product;
 }
 
+//UI for each item in the FlatList, including the image, name, and price of an item.
 const ProductListItem=({product}: ProductListItemProps)=> {
   return(
     <Link href={`../menu/${product.id}`} style={styles.container}>

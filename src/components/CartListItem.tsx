@@ -14,6 +14,7 @@ type CartListItemProps={
 const CartListItem=({cartItem}: CartListItemProps)=> {
     const {updateQuantity}=useCart();
     return (
+        //UI for cart item, shows image, price, name, and quantity
         <View style={styles.container}>
             <Image
                 source={{uri: cartItem.product.image || defaultPizzaImage}}
@@ -29,6 +30,7 @@ const CartListItem=({cartItem}: CartListItemProps)=> {
             </View>
             <View style={styles.quantitySelector}>
                 <FontAwesome
+                    //Minus button to remove number of a type of item from cart
                     onPress={()=>updateQuantity(cartItem.product.name, cartItem.size, -1)}
                     name="minus"
                     color="gray"
@@ -36,6 +38,7 @@ const CartListItem=({cartItem}: CartListItemProps)=> {
                 />
                 <Text style={styles.quantity}>{cartItem.quantity}</Text>
                 <FontAwesome
+                    //Plus button to add to quantity of item in cart
                     onPress={()=>updateQuantity(cartItem.product.name, cartItem.size, 1)}
                     name="plus"
                     color="gray"

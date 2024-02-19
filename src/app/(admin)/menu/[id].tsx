@@ -9,6 +9,7 @@ import { useCart } from '@/src/providers/CartProvider';
 import { PizzaSize } from '@/src/types';
 import { FontAwesome } from '@expo/vector-icons';
 
+//Sizes of Pizza for the user to choose
 const sizes: PizzaSize[]=['S','M','L','XL'];
 
 const ProductDetailsScreen=() => {
@@ -28,6 +29,7 @@ const ProductDetailsScreen=() => {
         return <Text>Oops! No food here!</Text>
     }
     return (
+        //Menu screen
         <View style={styles.container}>
             <Stack.Screen options={{title: 'Menu', headerRight: () => (
             <Link href={`/(admin)/menu/create?id=${id}`} asChild>
@@ -55,6 +57,7 @@ const ProductDetailsScreen=() => {
     );
 };
 
+//Styles
 const styles=StyleSheet.create({
     container: {
         backgroundColor: 'white',

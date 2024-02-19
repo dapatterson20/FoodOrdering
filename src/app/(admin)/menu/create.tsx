@@ -17,6 +17,8 @@ const CreateProductScreen=()=> {
         setPrice('');
     };
     const [errors, setErrors]=useState('');
+
+    //Error checking
     const validateInput=()=> {
         setErrors('');
         if (!name) {
@@ -58,6 +60,7 @@ const CreateProductScreen=()=> {
         resetFields();
     };
 
+    //Delete an item
     const onDelete=()=> {
         console.warn('Delete!!!')
     };
@@ -74,6 +77,7 @@ const CreateProductScreen=()=> {
             }]);
     };
 
+    //Pick an image from the local machine for the new product.
     const pickImage=async()=> {
         let result=await ImagePicker.launchImageLibraryAsync({
             mediaTypes: ImagePicker.MediaTypeOptions.All,
@@ -88,6 +92,7 @@ const CreateProductScreen=()=> {
     };
 
     return (
+        //UI, shows the image, text boxes for input, and create/update and delete elements.
         <View style={styles.container}>
             <Stack.Screen options={{title: isUpdating ? 'Update Product': 'Create Product'}}/>
             <Image source={{uri: image || defaultPizzaImage}} style={styles.image}/>

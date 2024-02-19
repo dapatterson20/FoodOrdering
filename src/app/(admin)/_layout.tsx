@@ -29,11 +29,11 @@ export default function TabLayout() {
         tabBarStyle: {
           backgroundColor: Colors.light.tint,
         },
-        
+        //Tabs at the bottom of the screen below
       }}>
 
         <Tabs.Screen name="index" options={{href: null}}/>
-
+      
       <Tabs.Screen
         name="menu"
         options={{

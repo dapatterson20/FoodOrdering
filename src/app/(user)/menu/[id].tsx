@@ -8,6 +8,7 @@ import Button from '@components/Buttons';
 import { useCart } from '@/src/providers/CartProvider';
 import { PizzaSize } from '@/src/types';
 
+//Available pizza sizes
 const sizes: PizzaSize[]=['S','M','L','XL'];
 
 const ProductDetailsScreen=() => {
@@ -29,7 +30,7 @@ const ProductDetailsScreen=() => {
     return (
         <View style={styles.container}>
             <Stack.Screen options={{title: product.name}}/>
-            <Image 
+            <Image  //Product details screen UI
                 source={{uri: product.image || defaultPizzaImage}}
                 style={styles.image}
             />
@@ -39,6 +40,7 @@ const ProductDetailsScreen=() => {
             <View style={styles.sizes}>
                 {sizes.map((size)=> (
                     <Pressable 
+                        //Set size of item by pressing a size.
                         onPress={()=>{setSelectedSize(size)}}
                         style={[styles.size, {backgroundColor: selectedSize==size ? 'gainsboro': 'white'}]} key={size}
                         >

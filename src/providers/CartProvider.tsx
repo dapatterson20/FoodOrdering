@@ -37,7 +37,7 @@ const CartProvider=({children}: PropsWithChildren)=> {
         setItems([newCartItem, ...items]);
     };
 
-    //update quantity
+    //Update quantity: make sure not to add duplicate items to array of items in cart; if same name and size, simply increment  quantity counter.
     const updateQuantity= (itemName: string, itemSize: string, amount: -1 | 1)=> {
         const updatedItems=items.map(item=>item.product.name+item.size!=itemName+itemSize? item: {...item, quantity: item.quantity+amount});
         setItems(updatedItems.filter((item)=>item.quantity>0));

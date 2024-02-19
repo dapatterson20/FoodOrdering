@@ -8,6 +8,7 @@ import Button from '@components/Buttons'
 const CartScreen=()=> {
     const{items, total}=useCart();
     return (
+        //Flatlist UI to organize items in cart in a list of one column
         <View style={{padding: 10}}>
             <FlatList 
             data={items} 

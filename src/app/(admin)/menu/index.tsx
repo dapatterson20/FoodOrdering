@@ -8,6 +8,7 @@ import ProductListItem from '@components/ProductListItem';
 
 export default function MenuScreen() {
   return (
+    //Shows list of items including product name, image, and price
     <FlatList
       data={products}
       renderItem={({item})=> <ProductListItem product={item}/>}
