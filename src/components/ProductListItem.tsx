@@ -4,7 +4,7 @@ import EditScreenInfo from '@/src/components/EditScreenInfo';
 import { Text, View } from '@/src/components/Themed';
 import Colors from '../constants/Colors';
 import {Product} from '../types';
-import {Link} from 'expo-router';
+import {Link, useSegments} from 'expo-router';
 
 export const defaultPizzaImage=
     'https://sawepecomcdn.blob.core.windows.net/ph-web-ordering/Pizza_Hut_PL/Zdjecia/Refresh_26.10.23/WWW/1.PIZZE/pizza_pepperoni_1000x1000.jpg';
