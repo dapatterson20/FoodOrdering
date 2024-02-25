@@ -8,9 +8,23 @@ import Button from '@components/Buttons';
 import { useCart } from '@/src/providers/CartProvider';
 import { PizzaSize } from '@/src/types';
 
+
 //Available pizza sizes
+/*
+Creating a list/array of strings which contains the available sizes of pizza
+Comment by Lillie Hunter
+*/
 const sizes: PizzaSize[]=['S','M','L','XL'];
 
+//Available pizza sizes
+
+/*
+Creating a constant component named Product Details Screen which will be the interface that user get 
+a decription of various products and are able to add items to their cart. There is an add to cart component 
+that when a product is selected (True) it will return that product, its selected size, and push it to the cart. Otherwise it will return nothing (null)
+The compontent also returns how the product information is to be displayed (font styles, background colors).
+Comment by Lillie Hunter
+*/
 const ProductDetailsScreen=() => {
     const{id}=useLocalSearchParams();
     const{addItem}=useCart();
@@ -53,6 +67,12 @@ const ProductDetailsScreen=() => {
     );
 };
 
+/*
+This code contains the styes associated with the component and how it is to be displayed to the user. 
+This includes styles for how the product's image, asociated price, and size is supposed to be displayed.
+Comment by Lillie Hunter
+*/
+
 const styles=StyleSheet.create({
     container: {
         backgroundColor: 'white',
@@ -86,4 +106,8 @@ const styles=StyleSheet.create({
     },
 });
 
+/*
+Deploys the component for usage in the project
+Comment by Lillie Hunter
+*/
 export default ProductDetailsScreen
