@@ -14,6 +14,14 @@ import { useColorScheme } from '@/src/components/useColorScheme';
 //Import from ts file as server automatic rendering isn't supported
 import { useClientOnlyValue } from '@/src/components/useClientOnlyValue';
 
+ /*
+   This code manages the User's menu layout and what tabs will appear at the bottom of the app for the user to navigate the app.
+   The function TabBar returns the icons that are assocated with each tab (i.e. The menu tab having a picture icon of a book).
+   The TabLayout function displays UI elements on screen such as making the tabs themself (this is accomplished in the tab container) and what each name should be named. 
+   It is also responsible for displaying the photo icon.
+   Commented by Lillie Hunter 
+*/
+
 // You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
 //Function to set icons of bottom tabs
 function TabBarIcon(props: {
