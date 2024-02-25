@@ -7,8 +7,18 @@ import { Text, View } from './Themed';
 
 import Colors from '@/src/constants/Colors';
 
+/*
+  Created a component called Edit Screen Info which will serve as a screen for user to change certain screen settings. 
+  By using view constainers, hyper links, and text, it creates a page layout displaying these features. 
+  Commented by Lillie Hunter 
+*/
+
 export default function EditScreenInfo({ path }: { path: string }) {
   return (
+/*
+  Creates a View container with its specified colors and assigned style
+  Commented by Lillie Hunter 
+*/
     <View>
       <View style={styles.getStartedContainer}>
         <Text
@@ -24,7 +34,11 @@ export default function EditScreenInfo({ path }: { path: string }) {
           lightColor="rgba(0,0,0,0.05)">
           <MonoText>{path}</MonoText>
         </View>
-
+/*
+  Creates a Text container with its specified colors and assigned style and 
+  will display the message: 'Change any of the text, save the file, and your app will automatically update.'
+  Commented by Lillie Hunter 
+*/
         <Text
           style={styles.getStartedText}
           lightColor="rgba(0,0,0,0.8)"
@@ -34,6 +48,11 @@ export default function EditScreenInfo({ path }: { path: string }) {
       </View>
 
       <View style={styles.helpContainer}>
+
+/*
+  Creates an hyperlink to a specificed destination 
+  Commented by Lillie Hunter 
+*/
         <ExternalLink
           style={styles.helpLink}
           href="https://docs.expo.io/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet">
@@ -45,6 +64,11 @@ export default function EditScreenInfo({ path }: { path: string }) {
     </View>
   );
 }
+
+/*
+  Creates a Style Sheet of dimentions/formatting for different nested containers within the EditScreenInfo component.
+  Comment by Lillie Hunter
+*/
 
 const styles = StyleSheet.create({
   getStartedContainer: {
